@@ -532,6 +532,7 @@ body {
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .modal-exit-button {
@@ -556,18 +557,97 @@ body {
   fill: #ffffff;
 }
 
-.modal-form-input-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+.form-field {
+  margin-bottom: 8px;
 }
 
-.modal-form-label {
-  display: flex;
-  flex-direction: column;
+.last-field {
+  margin-bottom: 0;
+}
+
+.form-label {
+  display: block;
   font-size: 12px;
   line-height: 1.16667;
   letter-spacing: 0.04em;
   color: #8e8f99;
-  gap: 4px;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+.form-input {
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  width: 360px;
+  height: 40px;
+  padding-left: 38px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  display: block;
+}
+
+.form-input:focus {
+  border: 1px solid #4d5ae5;
+}
+
+.form-input:focus + .form-icon {
+  fill: #4d5ae5;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.form-icon {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-textarea {
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  width: 360px;
+  height: 120px;
+  resize: none;
+  padding: 8px 16px;
+  outline: none;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+}
+
+.form-textarea:focus {
+  border: 1px solid #4d5ae5;
+}
+
+.form-textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-textarea:focus::placeholder {
+  color: #4d5ae5;
+}
+
+.form-send-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  width: 169px;
+  height: 56px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  background-color: #4d5ae5;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
 }
